@@ -1,0 +1,13 @@
+{
+  "name": "learn-sql-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "express": "^4.19.2",
+    "node-sql-parser": "^5.0.0",
+    "node-fetch": "^3.3.2",
+    "cors": "^2.8.5"
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .container{
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+
+        .member-box{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .highlight{
+            background-color: #dff9fb;
+        }
+
+        .success{
+            color: green;
+            font-weight: bold;
+        }
+
+        button{
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container" id="mainContainer">
+
+    <!-- Event Heading -->
+    <h1 id="eventTitle" class="main-heading">
+        National Coding Championship 2026
+    </h1>
+
+    <!-- Organizer Information -->
+    <div id="organizerInfo" class="info-section">
+
+        <p class="org-detail">Organized By: CSE-AIML Department</p>
+        <p class="org-detail">DKTE's Textile and Engineering Institute, Ichalkaranji</p>
+        <p class="org-detail">Contact: 98xxxx7645</p>
+    </div>
+
+    <h2>Team Registration</h2>
+
+    <form id="registrationForm">
+
+        <div class="member-box" id="leaderBox">
+
+            <h3 class="member-title">Team Leader</h3>
+
+            <input type="text" class="fullName" placeholder="Full Name">
+            <input type="text" class="mobile" placeholder="Mobile">
+            <input type="email" class="email" placeholder="Email">
+            <input type="text" class="college" placeholder="College">
+            <input type="text" class="address" placeholder="Address">
+
+        </div>
+
+        <div class="member-box">
+
+            <h3 class="member-title">Member 2</h3>
+
+            <input type="text" class="fullName" placeholder="Full Name">
+            <input type="text" class="mobile" placeholder="Mobile">
+            <input type="email" class="email" placeholder="Email">
+            <input type="text" class="college" placeholder="College">
+            <input type="text" class="address" placeholder="Address">
+        </div>
+
+        <div class="member-box">
+            <h3 class="member-title">Member 3</h3>
+            <input type="text" class="fullName" placeholder="Full Name">
+            <input type="text" class="mobile" placeholder="Mobile">
+            <input type="email" class="email" placeholder="Email">
+            <input type="text" class="college" placeholder="College">
+            <input type="text" class="address" placeholder="Address">
+        </div>
+
+        <div class="member-box">
+            <h3 class="member-title">Member 4</h3>
+            <input type="text" class="fullName" placeholder="Full Name">
+            <input type="text" class="mobile" placeholder="Mobile">
+            <input type="email" class="email" placeholder="Email">
+            <input type="text" class="college" placeholder="College">
+            <input type="text" class="address" placeholder="Address">
+        </div>
+
+        <button type="button" id="registerButton">Register Team</button>
+
+    </form>
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+
+    //Register Button 
+    document.getElementById("registerButton").addEventListener("click", function(){
+
+        const names = document.querySelectorAll(".fullName");
+
+        let emptyField = false;
+
+        names.forEach(function(input){
+            if(input.value.trim() === ""){
+                emptyField = true;
+                input.style.border = "2px solid red";
+            } else {
+                input.style.border = "1px solid #ccc";
+            }
+        });
+
+        const message = document.getElementById("message");
+
+        if(emptyField){
+            message.innerText = "Please fill all Full Names!";
+            message.className = "";
+        } else {
+            message.innerText = "Team Registered Successfully!";
+            message.className = "success";
+
+            //Message for successful registration
+            document.getElementById("eventTitle").innerText =
+                "Registration Completed - National Coding Championship 2026";
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

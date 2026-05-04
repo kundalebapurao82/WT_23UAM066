@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Learn SQL</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Learn SQL</h1>
+  <p class="subtitle">Upload dataset → Ask question → Get SQL</p>
+
+  <!-- Upload -->
+  <div class="card">
+    <h3>Upload File</h3>
+    <input type="file" id="file-input" />
+  </div>
+
+  <!-- Preview -->
+  <div class="card">
+    <h3>Preview (First 10 Rows)</h3>
+    <div id="preview"></div>
+  </div>
+
+  <!-- Question -->
+  <div class="card">
+    <h3>Ask Question</h3>
+    <textarea id="question" placeholder="e.g. Show employees with salary > 1000"></textarea>
+    <button onclick="generateSQL()">Generate SQL</button>
+  </div>
+
+  <!-- Output -->
+  <div class="card">
+    <h3>Generated SQL</h3>
+    <pre id="output"></pre>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

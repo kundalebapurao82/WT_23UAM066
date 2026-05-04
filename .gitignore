@@ -1,0 +1,17 @@
+# .env files
+.env
+.env.local
+# Logs
+logs
+*.log
+# Runtime data
+pids
+*.pid
+*.seed
+node_modules/
+dist/
+build/
+.env
+*.log
+
+

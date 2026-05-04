@@ -1,0 +1,110 @@
+<div class="container">
+
+<h1>Grape Farmer Expense Tracker</h1>
+
+<div class="top-grid">
+
+<!-- Form -->
+<div class="card">
+
+<h2>Add Expense</h2>
+
+<select [(ngModel)]="category">
+<option value="">Select Category</option>
+<option *ngFor="let c of categories">
+{{c}}
+</option>
+</select>
+
+<input type="number"
+placeholder="Amount"
+[(ngModel)]="amount">
+
+<input type="date"
+[(ngModel)]="date">
+
+<input type="text"
+placeholder="Note"
+[(ngModel)]="note">
+
+<button (click)="addExpense()">
+Add Expense
+</button>
+
+</div>
+
+<!-- Summary -->
+<div class="card total-card">
+
+<h2>Total Expense</h2>
+
+<h3>₹ {{getTotal()}}</h3>
+
+<p>{{getFiltered().length}} Records</p>
+
+</div>
+
+</div>
+
+<!-- Filters -->
+<div class="card toolbar">
+
+<select [(ngModel)]="selectedCategory">
+
+<option value="All">All Categories</option>
+
+<option *ngFor="let c of categories">
+{{c}}
+</option>
+
+</select>
+
+<input type="month"
+[(ngModel)]="selectedMonth">
+
+<button (click)="exportExcel()">
+Export Excel
+</button>
+
+</div>
+
+<!-- Table -->
+<div class="card">
+
+<h2>Expense Records</h2>
+
+<table *ngIf="getFiltered().length > 0">
+
+<tr>
+<th>Date</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Note</th>
+<th>Action</th>
+</tr>
+
+<tr *ngFor="let e of getFiltered()">
+
+<td>{{e.date}}</td>
+<td>{{e.category}}</td>
+<td>₹ {{e.amount}}</td>
+<td>{{e.note}}</td>
+
+<td>
+<button class="delete"
+(click)="deleteExpense(e.id)">
+Delete
+</button>
+</td>
+
+</tr>
+
+</table>
+
+<p *ngIf="getFiltered().length==0">
+No Expenses Found
+</p>
+
+</div>
+
+</div>

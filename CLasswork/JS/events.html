@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Amazing Images (Click to Remove)</h2>
+
+    <ul id="images">
+        <li>
+            <img id="photoshop"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                alt="Photoshop Logo">
+        </li>
+
+        <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                alt="Mount Fuji">
+        </li>
+
+        <li>
+            <img id="Nature"
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+                alt="Nature Image">
+        </li>
+
+        <li>
+            <img id="photoman"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Photographer">
+                
+        </li>
+
+        <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                alt="Tiger"
+                onclick="alert('This is image of tiger...')">       <!-- HTML should contain structure, JS contain logic, so mixing both is bad way, hard to maintain -->
+                
+        </li>
+
+        <li>
+            <a href="https://google.com" id="google">Visit Google</a>
+        </li>
+    </ul>
+  </body>
+  <script>
+    document.getElementById('Nature').onclick = function() {
+        alert('This is image of nature...');   
+    };     
+                // Select element by id and assign a function to its onclick event. This is better than inline event handling as it keeps HTML clean and separates structure from behavior.
+                // Only one event can be assigned, cannot handle multiple listeners properly.
+
+    // document.getElementById('photoshop').addEventListener("click", function(e){
+    //     console.log(e);
+    // }, false);
+    // Addevent listner is a JS method used to attach an event handler to a specified element.so that specific function run when a particluar event ocuurs on that element.
+
+    // Event propagation: When an event occurs on an element, it can trigger events on its parent elements as well
+    document.getElementById('images').addEventListener("click", function(){
+        console.log("Clicking inside the ul element");
+    }, true);
+
+
+    document.getElementById('photoshop').addEventListener("click", function(){
+        console.log("Clicking on photoshop image");
+    }, false);
+
+    // true: event capturing phase      // parent to clild
+    // false: event bubbling/propagation phase (default)  // child to parent
+
+    document.getElementById('google').addEventListener("click", function(e){
+       console.log("Google link clicked");
+       e.preventDefault();  // Prevents the default action of the event, in this case, it prevents the link from navigating to Google when clicked.
+    });
+
+  </script>
+</html>
+
+
+<!-- JQuery?
+    Type timestamp, default prevented, target, source element, event type, clientX/Y, screenX/Y, altKey, ctrlKey, shiftKey,  etc.
+
+-->
+
+<!-- On which image clicked, that image should be deleted and after refreshing it should be there again -->

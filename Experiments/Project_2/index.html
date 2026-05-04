@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Report</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <!-- Login-->
+    <div id="loginPage">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+        <p id="loginError"></p>
+    </div>
+
+    <!-- Weather-->
+    <div id="mainPage" style="display:none;">
+        <h2>Weather Report</h2>
+
+        <input type="text" id="city" placeholder="Enter City">
+        <button onclick="getWeather()">Get Weather</button>
+
+        <div id="weatherResult"></div>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

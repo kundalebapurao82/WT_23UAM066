@@ -1,0 +1,16 @@
+.form {
+  margin: 10px 0;
+}
+
+input {
+  margin: 5px;
+  padding: 6px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

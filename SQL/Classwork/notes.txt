@@ -1,0 +1,47 @@
+SQL: structured query language
+eg. MySQL, Oracle, SQL Server, PostgreSQL
+Used to communicate with relational databases
+
+Helps to create, read, update and delete data in a database
+CRUD operations: Create, Read, Update, Delete
+
+
+installation:
+npm install mysql2
+
+Acticity:
+Create table, insert data, select data, update data, delete data
+
+Student(PRN, Name, Age, Class)
+
+CREATE TABLE Student(
+    PRN INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Class VARCHAR(20)
+)
+
+INSERT INTO Student (PRN, Name, Age, Class) VALUES (1, 'Akshay', 22, 'AIML');
+INSERT INTO Student (PRN, Name, Age, Class) VALUES (2, 'Bapurao', 22, 'AIML');
+
+
+
+
+======== WEB SOCKETS ========
+ORM: Object Relational Mapping
+ - Instead of writing SQL queries we use JS objects to interact with the database.
+ without ORM: SELECT * FROM Stdudent
+ with ORM: Student.findAll()
+
+Websocket:
+ - allows us real-time communication between client and server
+ - HHTP -> request and response
+ - websocket -> continuous connection between client and server
+
+ Eg. chat applications like whatsapp, live stock price updates, online gaming, notification.
+
+To install websocket in our project:
+npm intstall ws
+
+Activities:
+Deep study web socket, understand concept with example.

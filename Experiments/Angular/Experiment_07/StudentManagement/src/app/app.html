@@ -1,0 +1,24 @@
+<h1>Student Management System</h1>
+
+<nav>
+  <button (click)="navigate('home')">Home</button>
+  <button (click)="navigate('add')">Add Student</button>
+  <button (click)="navigate('view')">View Students</button>
+</nav>
+
+<hr>
+
+<!-- Home -->
+<div *ngIf="currentPage === 'home'">
+  <h2>Welcome to Student Management System</h2>
+</div>
+
+<!-- Add Student -->
+<div *ngIf="currentPage === 'add'">
+  <app-add-student></app-add-student>
+</div>
+
+<!-- View Student -->
+<div *ngIf="currentPage === 'view'">
+  <app-view-student></app-view-student>
+</div>

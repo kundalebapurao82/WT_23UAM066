@@ -1,0 +1,9 @@
+Q. What is NodeJS
+Q. What is Java Script
+
+Q. What is difference between let, const, var
+
+
+Activity 1: Conversion of different data types
+
+

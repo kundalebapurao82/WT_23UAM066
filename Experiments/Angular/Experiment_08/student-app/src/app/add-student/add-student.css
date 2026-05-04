@@ -1,0 +1,15 @@
+.form {
+  margin: 10px 0;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background: blue;
+  color: white;
+  border: none;
+}

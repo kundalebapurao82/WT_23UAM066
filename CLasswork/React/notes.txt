@@ -1,0 +1,106 @@
+React: 
+
+- React is a JavaScript library for building user interfaces, developed by Facebook.
+
+- it is a single page application(SPA), means page does not realod only the content changes.
+
+Why do we use React?
+Problem with traditional JS:
+- Full page reload
+- complex DOM manipulation
+- Difficult to manage large applications
+Advantages of React:
+- Updates only the required parts, use the reusable components, and it is faster than traditional JS.
+
+Virtual DOM:
+- Reacts creates a copy of actual DOM called Virtual DOM.
+- When state(data) changes, React updates the cirtual DOM first, updates only changes parts of Actual DOM.
+- this results in faster updates and better performance.
+
+Creating project:
+check node and npm versions:
+- node -v
+- npm -v
+
+creating react app:
+- npx create-react-app app-name   //older version
+- npm create vite@latest app-name -- --template react   //newer version
+
+Activity:
+1. difference between Angular and React
+2. Market hype of React
+3. Why react is created?
+
+--------------------------------------------
+vite : fast build tool 
+npm install: install dependancies
+npm-run-dev: start the development server
+npm run build: create production build
+
+index.html: main file, renders the app
+
+src/main.jsx: jsx means javascript + XML, it allows us to write HTML- like code in JavaScript.
+entry point of react application and it renders the App component to the DOM.
+eg. const element = <h1> Hello, React! </h1>;
+
+Rules of JSX:
+- must written in a single parent element
+- use curly braces {} to embed JavaScript expressions
+
+
+
+src/App.jsx: main component of the app, it is a functional component.
+
+Components:
+compoenents is a heart of React.
+Functional components: it is a JavaScript function that returns JSX.
+eg. function Student() {
+  return <h1>This is functional component</h1>;
+}
+to use it component we can import it and use it as a tag in JSX.
+eg. function App() {
+    return <>
+        <h1>Welcome to React</h1>
+        <Student />
+    </>;
+}
+
+
+Props:
+Props is short for properties, it is a way to pass data from parent component to child component.
+eg. function Student(props) {
+  return <h1>My name is: {props.name}</h1>;
+}
+
+to use it component we can import it and use it as a tag in JSX.
+eg. function App() {
+    return <>
+        <h1>Welcome to React</h1>
+        <Student name="Akshay" />
+    </>;
+}
+
+
+Activites:
+1. What is components, types of components 
+When we use components in react? Also explain with 2 examples.
+
+2. What is props, why we use props and types of props. Also explain with 2 examples.
+
+=============== State ================
+State means data, that can change, value that changes over time. WHen state changes, screen updates automatically.
+
+
+why we use stste?
+- without state UI will not update when data changes, but with state UI will update automatically when data changes.
+
+
+to run the project:
+- npm run dev
+
+Routing:
+- Routing is the process of navigating between different pages or views in a web application.
+- React Router is a popular library for handling routing in React applications.
+have to install:
+- npm install react-router-dom
+

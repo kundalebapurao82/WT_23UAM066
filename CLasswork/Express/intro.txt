@@ -1,0 +1,61 @@
+Express is a minimal and flexible web application framework for node.js that simplifies the development of web server and APIs.
+It provides features such as routing, middleware support, request and response handling, template rendering, rest API creation,and more.
+
+activity1 = difference between package.json and package-lock.json
+activity 2 = difference bwtween dependancy and devDependancy
+
+http requests: get(), post(), put(), delete(), patch()
+
+Routing in Express.js
+Routing refers to determining how an application responds to a client request for specific endpoint(url) and HTTP methods.
+
+Components of routing:
+1. URL path
+2. HTTP methods
+3. Handler function
+
+Create 3-4 routes:
+1. app.get('/home', (req, res) => {
+     res.send('Welcome to the Home Page');
+    });
+2. app.get('/resources', (req, res) => {
+     res.send('This is the resources page');
+    });
+3.app.get('/about', (req, res) => {
+     res.send('This is the about page');
+    });
+4. app.get('/contact', (req, res))=>{
+        res.send('Contacts page');
+    }
+5. app.get('/services', (req, res) => {
+     res.send('This is the services page');
+    });
+
+    how to run this code:
+1. Save the code in a file named app.js
+2. Open terminal and navigate to the directory where app.js is located
+3. Run the command: node app.js
+4. Open a web browser and navigate to http://localhost:3000/home, http://localhost:3000/resources, http://localhost:3000/about, http://localhost:3000/contact, and http://localhost:3000/services to see the respective responses.
+
+
+Activity 3:
+
+
+Activity 4:
+Learn get(), post(), put(), delete(), patch() methods in Express.js
+
+
+Middleware in Express.js
+Middleware is a function that execute during the request before sending the fianl responce.
+They have access to the request , resonce and the next.
+client -> middleware -> route ->server
+
+Syntax:
+
+
+Activity:
+Why we use middleware
+what is types of middleware
+WHat are the benefits of middleware
+WHere we use middleware in company level
+

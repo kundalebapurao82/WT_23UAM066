@@ -1,0 +1,193 @@
+Lecture-1:
+
+Web Technology:
+Web technology refers to the tools, protocols, and languages (like HTML, CSS, JavaScript, servers, databases) used to build, run, and interact with websites and web applications, enabling communication and content delivery over the internet
+
+- used for activities from browsing to online shopping and banking
+
+ex:
+Viewing a Website: HTML structures the text, CSS styles it, and JavaScript makes a button work when clicked.
+Online Banking: Uses frontend (login page) and backend (database for accounts, security) technologies.
+Streaming Video: Involves server-side delivery, browser playback, and interactive controls. 
+
+
+Java Script:
+
+
+JavaScript (JS) is a versatile, high-level programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. It is primarily used to make web pages interactive and dynamic, running directly in the user's web browser. 
+
+
+- NodeJS used to run JavaScript code outside the browser.
+- Check installation: node -v
+- To run file : node filename.js
+
+
+
+JavaScript has 7 datatypes:
+Non- Primitive data types:
+- Object
+
+Primitive: 
+Number, string, Boolean, Big Int, Undefined, Null, Symbol 
+
+ 
+
+Variables :
+const: once declared, value not changed
+- Block-scoped (limited to {} blocks like if, for, functions)
+
+var : Function-scoped or global; accessible anywhere within its function.
+- Can be reassigned new values.
+
+let: Block-scoped (limited to {} blocks like if, for, functions)
+- Can be reassigned new values.
+
+
+
+
+
+
+Lecture 2: 14th Jan 2025:
+
+
+======== Conversion Operators =========
+
+Lecture: 21-01-2026
+Q. Function declaration and definition
+Q. methods of string
+Q. use of slice and split
+
+
+
+// DOM- Document Object model
+/**
+ * bridge between JS and HTML
+ * DOM is programming interface for HTML
+ * When browser load an HTML page, it converts HTML into an Object, That object structure is called DOM.
+ * JS uses DOM to read, change, add, delete HTML elements.
+ * The HTML DOM (HTML Document Object Model) is an Object Model for HTML Documents
+ * When a web page loads, the browser creates a tree-like representation of the HTML document
+ */
+
+
+
+document.getElementById("title").innerHTML = ""
+document.getElementById("title").id
+document.getElementById("title").class
+document.getElementById("title").className
+document.getElementById("title").setAttributes
+document.getElementById("title").getAttributes
+
+
+
+
+###### Events
+Events is an a action that happens in a browser.
+e.g. clicking button, moving mouse, pressing key, submitting form, loading page, etc.
+
+
+JS can detect these events and respond to them.
+
+Types of events:
+- Mouse event
+	click, dblclick, mouse hover, mouse out, 
+- Keyboard event
+	- key down, key up
+- Browser event
+	- load, resize, scroll
+
+
+
+
+
+# React
+Angular is Framework
+React is Library
+
+Angular is tyscript based frontend framework developed by Google.
+It helps us to build a single page application (SPA), where the page does not fully reload while navigation between different views.
+tools used for angular:
+Node.js is a runtime environment that allows us to run JavaScript code outside the browser, often used for server-side development.
+NPM (Node Package Manager) is a package manager for JavaScript, used to install and manage libraries and dependencies in Node.js projects.
+Angular CLI (Command Line Interface): To create or manage angular apps/projects.
+
+// install node js
+
+node --version
+npm install -g @angular/cli
+ng new myProject
+
+to run angular project:
+ng serve or ng s
+
+PSA includes:
+components: building blocks of UI eg, home, about, contact us, etc
+
+Package.json : Includes all the dependencies and scripts for the project. 
+Dependancies used for production . 
+DevDependencies used for development only.
+
+Angular.json : configuration file for angular project. 
+STyle.css : global styles for the project
+.gitignore: specifies files and directories that should be ignored by Git version control, preventing them from being tracked or included in commits. 
+tsconfig.json: typescript configuration file
+index.html: main HTML file, runs initially when the app loads. Loads angular .
+app.config.ts:app configuration file, used to define routes and other settings for the application.
+main.ts: entry point of the application.
+
+
+
+External:
+install node js
+check node version: node --version
+
+npm install -g @angular/cli
+ng new projectName
+to run angular project: ng serve or ng s
+
+for express:
+npm init 
+npm install express
+
+
+
+Components: component is a ui block, it is a class with html and css file. When we create one compoent (ng g component componentName) it creates 4 files.
+When we create a component, it creates 4 files:
+HTML, CSS, TypeScript and spec file (for testing).
+
+
+Data Binding: it is mechanism to connect UI to code.
+There are type of data binding:
+one-way data binding: - Interpolation, - property binding, - event binding
+Interpolation: show data from ts in HTML. sytnax: {{value}}
+
+
+
+============================= Activity =============================
+directives activity:
+when div1 is true, show div 1
+<div *ngIf="div1">Div 1</div>
+when div 2 is not true, show warning
+<div *ngIf="!div2">Div 2 is not true</div>
+
+keep buttons, if pressed "show", show div 1, if pressed "hide", hide div 1
+<button (click)="showDiv1()">Show</button>
+<button (click)="hideDiv1()">Hide</button>
+
+also toggle button, if clicked color of division changes.
+
+
+================= Services ==================
+Serivces is like a helper class, it is used to store data and logic so many components can use it.
+Instead of writing code in multiple codes, we write it once in a service and use it in multiple components.
+
+
+to create service: ng g service serviceName
+it created 2 files: serviceName.service.ts and serviceName.service.spec.ts
+service file is used to write logic and data, spec file is used for testing.
+
+
+============== Activity ==================
+Write 2 examples with services in angular and learn more about dependancy injection.
+
+===== Routing =====

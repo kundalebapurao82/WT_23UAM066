@@ -1,0 +1,28 @@
+<h2>Student Management System</h2>
+
+<div>
+  <input type="number" [(ngModel)]="newStudent.id" placeholder="ID">
+  <input type="text" [(ngModel)]="newStudent.name" placeholder="Name">
+  <input type="number" [(ngModel)]="newStudent.age" placeholder="Age">
+  <input type="text" [(ngModel)]="newStudent.course" placeholder="Course">
+
+  <button (click)="addStudent()">Add Student</button>
+</div>
+
+<hr>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Course</th>
+  </tr>
+
+  <tr *ngFor="let s of students">
+    <td>{{ s.id }}</td>
+    <td>{{ s.name }}</td>
+    <td>{{ s.age }}</td>
+    <td>{{ s.course }}</td>
+  </tr>
+</table>
